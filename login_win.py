@@ -7,7 +7,7 @@ from database import cur, get_user_role
 from hashed_passwds import hash_passwd
 from main_win import MainWin
 from reg_win import RegWin
-# from admin_win import AdminWin
+from admin_win import AdminWin
 
 class LoginWin(QWidget):
     def __init__(self):
@@ -47,7 +47,6 @@ class LoginWin(QWidget):
             return QMessageBox.warning(self, "Ошибка", "Неверный логин или пароль")
 
     def open_admin(self, user_id):
-        from admin_win import AdminWin
         cur.execute("SELECT surname, name FROM user WHERE id_user = %s", (user_id,))
         user = cur.fetchone()
         self.close()
