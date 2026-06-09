@@ -1,5 +1,7 @@
 import sys
 
+from PyQt6.QtCore import Qt
+from PyQt6.QtGui import QPixmap
 from PyQt6.QtWidgets import QDialog, QApplication, QLineEdit
 from PyQt6.uic import loadUi
 
@@ -15,32 +17,27 @@ class ObjectWin(QDialog):
         self.load_data()
 
     def load_data(self):
-        cur.execute("SELECT o.type, concat(u.surname,' ', u.name, ' ', COALESCE(u.third_name, '')), u.phone, o.address, o.status, o.square, o.price "
+        cur.execute("SELECT o.type, concat(u.surname,' ', u.name, ' ', COALESCE(u.third_name, '')), u.phone, o.address, o.status, o.square, o.price, o.photo_path "
                     "FROM object o "
                     "JOIN client c ON o.client_id = c.client_id "
                     "JOIN user u ON c.client_id = u.id_user "
                     "WHERE o.id_object = %s", (self.object_id,))
         res = cur.fetchone()
-        print(f"Результат: {res}")  # Что выводится?
-        print(f"Тип результата: {type(res)}")
+        self.labelTypeValue.setText(str(res[0]))
+        self.labelOwnerValue.setText(str(res[1]))
+        self.labelPhoneValue.setText(str(res[2]))
+        self.labelAddressValue.setText(str(res[3]))
+        self.labelStatusValue.setText(str(res[4]))
+        self.labelSquareValue.setText(str(res[5]))
+        self.labelPriceValue.setText(f"{res[6]:,.0f} руб")
 
-        if res:
-            print(f"Количество полей: {len(res)}")
-            for i, val in enumerate(res):
-                print(f"Поле {i}: {val}")
+        photo_blob = res[7]
+        if photo_blob:
+            pixmap = QPixmap()
+            pixmap.loadFromData(photo_blob)
+            self.photo_label.setPixmap(pixmap)
         else:
-            print("Результат пустой!")
-        self.label_11.setText(str(res[0]))
-        self.label_12.setText(str(res[1]))
-        self.label_13.setText(str(res[2]))
-        self.label_14.setText(str(res[3]))
-        self.label_15.setText(str(res[4]))
-        self.label_16.setText(str(res[5]))
-        self.label_17.setText(str(res[6]))
-
-
-
-
+            self.photo_label.setText("Нет фото")
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)

@@ -1,175 +1,180 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>Form</class>
- <widget class="QWidget" name="Form">
+ <class>ObjectWindow</class>
+ <widget class="QWidget" name="ObjectWindow">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>717</width>
-    <height>459</height>
+    <width>669</width>
+    <height>519</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Form</string>
+   <string>Информация об объекте</string>
   </property>
-  <layout class="QGridLayout" name="gridLayout">
-   <item row="8" column="4">
-    <widget class="QPushButton" name="pushButton">
+  <layout class="QGridLayout" name="gridLayout" columnstretch="0,0">
+   <item row="7" column="1">
+    <widget class="QLabel" name="labelPriceValue">
+     <property name="font">
+      <font>
+       <pointsize>12</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>-</string>
+     </property>
+    </widget>
+   </item>
+   <item row="7" column="0">
+    <widget class="QLabel" name="labelPrice">
+     <property name="text">
+      <string>Цена:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="6" column="0">
+    <widget class="QLabel" name="labelSquare">
+     <property name="text">
+      <string>Площадь:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="6" column="1">
+    <widget class="QLabel" name="labelSquareValue">
+     <property name="text">
+      <string>-</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="0">
+    <widget class="QLabel" name="labelType">
+     <property name="text">
+      <string>Тип:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="0" colspan="2">
+    <widget class="QLabel" name="labelTitle">
+     <property name="font">
+      <font>
+       <pointsize>14</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>Информация об объекте</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="1">
+    <widget class="QLabel" name="labelTypeValue">
+     <property name="text">
+      <string>-</string>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="0">
+    <widget class="QLabel" name="labelOwner">
+     <property name="text">
+      <string>Владелец:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="0">
+    <widget class="QLabel" name="labelStatus">
+     <property name="text">
+      <string>Статус:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="1">
+    <widget class="QLabel" name="labelStatusValue">
+     <property name="text">
+      <string>-</string>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="0">
+    <widget class="QLabel" name="labelAddress">
+     <property name="text">
+      <string>Адрес:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="1">
+    <widget class="QLabel" name="labelAddressValue">
+     <property name="text">
+      <string>-</string>
+     </property>
+    </widget>
+   </item>
+   <item row="11" column="0" colspan="2">
+    <widget class="QPushButton" name="btnClose">
      <property name="text">
       <string>Купить</string>
      </property>
     </widget>
    </item>
-   <item row="2" column="0">
-    <widget class="QLabel" name="label_4">
+   <item row="8" column="0" colspan="2">
+    <widget class="QLabel" name="label">
      <property name="text">
-      <string>Владелец</string>
+      <string>Фото:</string>
      </property>
     </widget>
    </item>
-   <item row="7" column="0">
-    <widget class="QLabel" name="label_9">
+   <item row="3" column="1">
+    <widget class="QLabel" name="labelPhoneValue">
      <property name="text">
-      <string>Цена</string>
-     </property>
-    </widget>
-   </item>
-   <item row="7" column="2">
-    <widget class="QLabel" name="label_17">
-     <property name="text">
-      <string/>
-     </property>
-    </widget>
-   </item>
-   <item row="3" column="2">
-    <widget class="QLabel" name="label_13">
-     <property name="minimumSize">
-      <size>
-       <width>200</width>
-       <height>0</height>
-      </size>
-     </property>
-     <property name="text">
-      <string/>
+      <string>-</string>
      </property>
     </widget>
    </item>
    <item row="3" column="0">
-    <widget class="QLabel" name="label_5">
+    <widget class="QLabel" name="labelPhone">
      <property name="text">
-      <string>Номер теклефона</string>
+      <string>Телефон:</string>
      </property>
     </widget>
    </item>
-   <item row="0" column="3" colspan="2">
-    <widget class="QLabel" name="label_2">
+   <item row="2" column="1">
+    <widget class="QLabel" name="labelOwnerValue">
      <property name="text">
-      <string/>
+      <string>-</string>
      </property>
     </widget>
    </item>
-   <item row="4" column="2">
-    <widget class="QLabel" name="label_14">
+   <item row="9" column="0">
+    <widget class="QLabel" name="photo_label">
      <property name="minimumSize">
       <size>
-       <width>200</width>
-       <height>0</height>
+       <width>300</width>
+       <height>250</height>
       </size>
      </property>
-     <property name="text">
-      <string/>
-     </property>
-    </widget>
-   </item>
-   <item row="5" column="0">
-    <widget class="QLabel" name="label_7">
-     <property name="text">
-      <string>Статус</string>
-     </property>
-    </widget>
-   </item>
-   <item row="0" column="0">
-    <widget class="QLabel" name="label">
-     <property name="text">
-      <string>Информация об объекте:</string>
-     </property>
-    </widget>
-   </item>
-   <item row="5" column="2">
-    <widget class="QLabel" name="label_15">
-     <property name="text">
-      <string/>
-     </property>
-    </widget>
-   </item>
-   <item row="1" column="0">
-    <widget class="QLabel" name="label_3">
-     <property name="text">
-      <string>Тип</string>
-     </property>
-    </widget>
-   </item>
-   <item row="6" column="0">
-    <widget class="QLabel" name="label_8">
-     <property name="text">
-      <string>Площадь</string>
-     </property>
-    </widget>
-   </item>
-   <item row="1" column="4" rowspan="7">
-    <widget class="QListWidget" name="listWidget">
-     <property name="sizePolicy">
-      <sizepolicy hsizetype="Expanding" vsizetype="Minimum">
-       <horstretch>0</horstretch>
-       <verstretch>0</verstretch>
-      </sizepolicy>
-     </property>
-     <property name="minimumSize">
+     <property name="maximumSize">
       <size>
-       <width>0</width>
-       <height>0</height>
+       <width>300</width>
+       <height>250</height>
       </size>
      </property>
-    </widget>
-   </item>
-   <item row="4" column="0">
-    <widget class="QLabel" name="label_6">
-     <property name="text">
-      <string>Адрес</string>
-     </property>
-    </widget>
-   </item>
-   <item row="6" column="2">
-    <widget class="QLabel" name="label_16">
-     <property name="text">
-      <string/>
-     </property>
-    </widget>
-   </item>
-   <item row="1" column="1" colspan="3">
-    <widget class="QLabel" name="label_11">
-     <property name="minimumSize">
-      <size>
-       <width>200</width>
-       <height>0</height>
-      </size>
+     <property name="frameShape">
+      <enum>QFrame::Box</enum>
      </property>
      <property name="text">
-      <string/>
+      <string>Нет фото</string>
      </property>
-    </widget>
-   </item>
-   <item row="2" column="1" colspan="3">
-    <widget class="QLabel" name="label_12">
-     <property name="minimumSize">
-      <size>
-       <width>200</width>
-       <height>0</height>
-      </size>
+     <property name="scaledContents">
+      <bool>true</bool>
      </property>
-     <property name="text">
-      <string/>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
      </property>
     </widget>
    </item>

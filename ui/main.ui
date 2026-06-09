@@ -25,7 +25,7 @@
         <x>0</x>
         <y>0</y>
         <width>532</width>
-        <height>449</height>
+        <height>454</height>
        </rect>
       </property>
       <layout class="QVBoxLayout" name="verticalLayout">
@@ -48,6 +48,16 @@
      <item>
       <property name="text">
        <string>Профиль</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Мои объекты</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Мои контракты</string>
       </property>
      </item>
      <item>
@@ -110,18 +120,7 @@
     </widget>
    </item>
    <item row="0" column="1" colspan="2">
-    <layout class="QHBoxLayout" name="horizontalLayout">
-     <item>
-      <widget class="QLineEdit" name="lineEdit"/>
-     </item>
-     <item>
-      <widget class="QPushButton" name="pushButton">
-       <property name="text">
-        <string>Поиск</string>
-       </property>
-      </widget>
-     </item>
-    </layout>
+    <layout class="QHBoxLayout" name="horizontalLayout"/>
    </item>
    <item row="0" column="0">
     <widget class="QLabel" name="label">
