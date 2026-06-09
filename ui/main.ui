@@ -24,8 +24,8 @@
        <rect>
         <x>0</x>
         <y>0</y>
-        <width>550</width>
-        <height>461</height>
+        <width>532</width>
+        <height>449</height>
        </rect>
       </property>
       <layout class="QVBoxLayout" name="verticalLayout">
@@ -89,7 +89,7 @@
      </item>
      <item>
       <property name="text">
-       <string>Кваритиры</string>
+       <string>Квартиры</string>
       </property>
      </item>
      <item>

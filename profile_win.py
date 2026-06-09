@@ -1,10 +1,10 @@
 import sys
 
-from PyQt6.QtWidgets import QWidget, QApplication
+from PyQt6.QtWidgets import QApplication, QDialog
 from PyQt6.uic import loadUi
 
 
-class ProfileWin(QWidget):
+class ProfileWin(QDialog):
     def __init__(self):
         super().__init__()
         loadUi("ui/profile_menu.ui", self)
