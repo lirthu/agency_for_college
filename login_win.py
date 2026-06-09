@@ -18,6 +18,7 @@ class LoginWin(QWidget):
 
 
     def login(self):
+        self.line_login_field.setFocus()
         login = self.line_login_field.text()
         password = self.line_passwd_field.text()
 
@@ -35,13 +36,15 @@ class LoginWin(QWidget):
 
         if res:
             self.open_main()
+            self.line_login_field.clear()
+            self.line_passwd_field.clear()
         else:
             return QMessageBox.warning(self, "Ошибка", "Неверный логин или пароль")
 
 
     def open_main(self):
         self.close()
-        self.win = MainWin()
+        self.win = MainWin(self)
         self.win.show()
 
     def open_reg(self):
