@@ -64,7 +64,7 @@ class MainWin(QWidget):
 
         if res:
             object_id = res[0][0]
-            self.win = ObjectWin(object_id)
+            self.win = ObjectWin(object_id, self.user_id)
             self.win.exec()
 
     def logout(self):
